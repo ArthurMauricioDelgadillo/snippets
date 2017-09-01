@@ -16,19 +16,19 @@ describe('Validation Error', () => {
     const data = [
         {
             validationError: new ValidationError('firstName', { key: 'required' }),
-            message: 'The field first name is required.'
+            message: 'The first name field is required.'
         },
         {
             validationError: new ValidationError('user_name', { key: 'minlength', requiredLength: 4, actualLength: 2 }),
-            message: 'The field user name must be at least 4 characters long, but was 2.'
+            message: 'The user name must be at least 4 characters long, but was 2.'
         },
         {
             validationError: new ValidationError('email', { key: 'required' }),
-            message: 'The field E-mail Address is required.'
+            message: 'The E-mail Address field is required.'
         },
         {
             validationError: new ValidationError('email', { key: 'not existing key' }),
-            message: 'The field E-mail Address is invalid.'
+            message: 'The E-mail Address field is invalid.'
         },
         {
             validationError: new ValidationError('user-name', { key: 'forbiddenName', value: 'Bob squarepants' }),

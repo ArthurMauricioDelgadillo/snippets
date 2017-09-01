@@ -12,12 +12,12 @@ export class ValidationRuleMessage {
 class ValidationRuleMessages {
     constructor() {
         this.defaultValidationRuleMessage = new ValidationRuleMessage('default',
-            (error, displayName) => `The field ${displayName} is invalid.`)
+            (error, displayName) => `The ${displayName} field is invalid.`)
         this.data = [
             new ValidationRuleMessage('required',
-                (error, displayName) => `The field ${displayName} is required.`),
+                (error, displayName) => `The ${displayName} field is required.`),
             new ValidationRuleMessage('minlength',
-                (error, displayName) => `The field ${displayName} must be at least ${error.requiredLength} characters long, but was ${error.actualLength}.`)
+                (error, displayName) => `The ${displayName} must be at least ${error.requiredLength} characters long, but was ${error.actualLength}.`)
         ]
     }
 
